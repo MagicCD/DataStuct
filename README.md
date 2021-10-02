@@ -416,7 +416,7 @@ int main()
 
 
 
-+ 参考 bolg：
++ 参考 blog：
 
 [C++ 详解创建链表过程](https://blog.csdn.net/qq_41620518/article/details/81143414)
 
