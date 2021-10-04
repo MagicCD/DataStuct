@@ -408,10 +408,7 @@ int main()
 }
 ~~~
 
-![image-20211002123713629](E:\笔记\数据结构与算法\image\image-20211002123713629.png)
-
-
-
+![image-20211002123713629](https://user-images.githubusercontent.com/87908620/135874746-bac8b200-0029-40de-9ebc-c74038faea02.png)
 
 
 
@@ -437,8 +434,9 @@ int main()
 全部都得后退一步。骂声四起，但后面的人也不清楚这加塞是怎么回事，没什么办法。
 
 
+![image-20211002130612766](https://user-images.githubusercontent.com/87908620/135874897-4fd37858-b980-4277-a3fa-3948cbd721ab.png)
 
-<img src="E:\笔记\数据结构与算法\image\image-20211002130612766.png" alt="image-20211002130612766" style="zoom:80%;" />
+
 
 <h2>插入算法的思路</h2>
 
@@ -675,25 +673,27 @@ int main()
 
 1. 插入元素的函数在完成插入成功的操作时，返回的值为乱码，且没有插入成功
 
-<img src="E:\笔记\数据结构与算法\image\image-20211002155310434.png" alt="image-20211002155310434" style="zoom:80%;" /> 
+![image-20211002155310434](https://user-images.githubusercontent.com/87908620/135875050-49ec65a2-c2fb-45b2-8fa1-11104bb79ff1.png)
 
 
 
 2. 后来我修改了判断的条件 把 i <= l.length 改成 i <= l.length + 1，程序运行正常
 
-<img src="E:\笔记\数据结构与算法\image\image-20211002155544096.png" alt="image-20211002155544096" style="zoom:80%;" /> 
+![image-20211002155544096](https://user-images.githubusercontent.com/87908620/135875114-2ce5ceea-79ef-45ed-9c14-4e8b42270a58.png)
+
 
 > 由此分析，问题可能出现在判断条件上
 
 于是列举问题分析程序运行步骤
 
-![00974abd95](E:\笔记\数据结构与算法\image\00974abd95.png)
+![00974abd95](https://user-images.githubusercontent.com/87908620/135875194-a7cb7251-81a8-4e34-b73a-f764a9e6ee6b.png)
+
 
 
 
 修改程序：
 
-<img src="E:\笔记\数据结构与算法\image\image-20211002171030983.png" alt="image-20211002171030983" style="zoom:80%;" /> 
+![image-20211002171030983](https://user-images.githubusercontent.com/87908620/135875233-47c9d6ed-f1c6-4791-a805-bbf69c8caa36.png)
 
 
 
@@ -701,7 +701,8 @@ int main()
 
 于是我又开始分析程序
 
-![image-20211002172649460](E:\笔记\数据结构与算法\image\image-20211002172649460.png)
+![image-20211002172649460](https://user-images.githubusercontent.com/87908620/135875318-13e47ff4-2b78-4956-aab2-bfdae24e2b18.png)
+
 
 
 
@@ -729,7 +730,8 @@ int main()
 
 *这就是线性表的顺序存储结构删除元素的过程*
 
-<img src="E:\笔记\数据结构与算法\image\image-20211002174003398.png" alt="image-20211002174003398" style="zoom:80%;" /> 
+![image-20211002174003398](https://user-images.githubusercontent.com/87908620/135875386-3049abb4-cc34-4f5a-b361-0f33e75aba3e.png)
+
 
 
 
@@ -837,12 +839,13 @@ int main()
 
 
 1. 在执行程序的时候，我发现无论我需要删除第i个位置的元素，最后遍历输出的结果都是 *第i个位置 取代第一个元素*
+![image-20211002235823857](https://user-images.githubusercontent.com/87908620/135875459-52a50348-d8f6-409e-8381-047299e3a15e.png)
 
-<img src="E:\笔记\数据结构与算法\image\image-20211002235823857.png" alt="image-20211002235823857" style="zoom:80%;" /> 
+ 
 
 
+![image-20211002235934565](https://user-images.githubusercontent.com/87908620/135875514-756aa031-46ae-4af6-b31f-bf654d940719.png)
 
-<img src="E:\笔记\数据结构与算法\image\image-20211002235934565.png" alt="image-20211002235934565" style="zoom:80%;" /> 
 
 
 
@@ -850,25 +853,28 @@ int main()
 
 到目前为止还是正常数值
 
-![image-20211003000254022](E:\笔记\数据结构与算法\image\image-20211003000254022.png)
+![image-20211003000254022](https://user-images.githubusercontent.com/87908620/135876101-7f18577b-9409-466a-9127-00a24aeda9cd.png)
+
 
 
 
 + 直到运行到第 28行，底下的数组值发生变化
 
-![image-20211003000624372](E:\笔记\数据结构与算法\image\image-20211003000624372.png)
+![image-20211003000624372](https://user-images.githubusercontent.com/87908620/135876157-30896f4d-93b2-444d-8c73-cf4909ec1057.png)
+
 
 
 
 + 分析时出现问题的行数在 第25行 ~ 第28行之间，故在第25行和28行打2个断点观察数值变化
 
-![image-20211003001500898](E:\笔记\数据结构与算法\image\image-20211003001500898.png)
+![image-20211003001500898](https://user-images.githubusercontent.com/87908620/135876210-9920b154-191a-4ea4-ae3c-2b7292dec6a2.png)
+
 
 
 
 问题分析：
+![image-20211003002957776](https://user-images.githubusercontent.com/87908620/135876288-0a02d35d-faca-45d0-8fd7-b3915e61fde0.png)
 
-![image-20211003002957776](E:\笔记\数据结构与算法\image\image-20211003002957776.png)
 
 > 故由这个问题可知，我们传入的实参有误，但是我们要先清楚 语句 *e = l.data[i - 1]是用来做什么的
 
@@ -886,7 +892,8 @@ int main()
 
 故，我传入 s1.data 是不对的
 
-![image-20211003100433698](E:\笔记\数据结构与算法\image\image-20211003100433698.png)
+![image-20211003100433698](https://user-images.githubusercontent.com/87908620/135876334-ecad2339-481e-49ae-860a-cddcf916ee45.png)
+
 
 
 
@@ -1152,7 +1159,7 @@ int main()
 
 把 ==存储直接后继位置的域== 称为 ==指针域==，指针域中存储的信息称作指针或链，这两部分信息组成数据元素 ai 的存储映像，称为**结点 Node**
 
-![image-20211003111245246](E:\笔记\数据结构与算法\image\image-20211003111245246.png)
+![ppl](https://user-images.githubusercontent.com/87908620/135879091-96b72b04-a34a-424c-a4bd-97ac6bc02bbd.png)
 
 
 
@@ -1395,13 +1402,6 @@ int main()
 	return 0;
 }
 ~~~
-
-
-
-
-
-
-
 
 
 
